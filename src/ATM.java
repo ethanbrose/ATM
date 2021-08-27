@@ -2,9 +2,17 @@ import java.util.*;
 
 
 public class ATM {
-	private String bankID;
-	//test
-	
-	
-	
+	public static void main (String[]args)
+	{
+		
+		HashMap<String, int> bankBalances = new HashMap<String,int>();
+		
+		
+		public void deposit (String theID, int amount)
+		{
+
+		}
+	}
+
+
 }
