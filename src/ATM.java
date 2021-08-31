@@ -8,7 +8,9 @@ public class ATM {
 		
 		public void deposit (String theID, double amount)
 		{
-			if (!(bankBalances.containsKey(theID)))
+			if (amount < 0) {
+			}	
+			else if (!(bankBalances.containsKey(theID)))
 			{
 				bankBalances.put(theID, amount);
 			}
@@ -16,6 +18,19 @@ public class ATM {
 			{
 				bankBalances.put(theID, bankBalances.get(theID)+amount);
 			}
+		}
+		
+		public boolean withDraw (String theID, double withdrawAmount) {
+			if (bankBalances.get(theID) < withdrawAmount) {
+				return false;
+			}
+			bankBalances.
+			return true;
+		}
+		//returns -1 if account doesn't exist
+		public double checkBalance (String theID) {
+			if (bankBalances.containsKey(theID)) return bankBalances.get(theID);
+			return -1;
 		}
 
 
