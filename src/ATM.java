@@ -14,7 +14,7 @@ public class ATM {
 			}
 			else
 			{
-				bankBalances.replace(theID, bankBalances.get(theID)+amount);
+				bankBalances.put(theID, bankBalances.get(theID)+amount);
 			}
 		}
 
