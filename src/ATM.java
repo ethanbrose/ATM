@@ -1,14 +1,12 @@
-import java.util.*;
+import java.util.HashMap;
 
 
 public class ATM {
-	public static void main (String[]args)
-	{
+	
+
+		HashMap<String, Double> bankBalances = new HashMap<String,Double>();
 		
-		HashMap<String, Integer> bankBalances = new HashMap<String,Integer>();
-		
-		
-		public void deposit (String theID, int amount)
+		public void deposit (String theID, double amount)
 		{
 			if (!(bankBalances.containsKey(theID)))
 			{
@@ -16,10 +14,9 @@ public class ATM {
 			}
 			else
 			{
-				bankBalances.put(theID, bankBalances.get(theID)+amount)
+				bankBalances.put(theID, bankBalances.get(theID)+amount);
 			}
 		}
-	}
 
 
 }
