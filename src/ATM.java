@@ -37,6 +37,7 @@ public class ATM {
 		 * @return true if money is successfully withdrawed, false otherwise
 		 */
 		public boolean withdraw (String theID, double withdrawAmount) {
+			if (!bankBalances.containsKey(theID))return false;
 			if (bankBalances.get(theID) < withdrawAmount) {
 				return false;
 			}
